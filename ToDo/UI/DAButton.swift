@@ -9,7 +9,11 @@ import UIKit
 
 @IBDesignable
 class DAButton: UIButton {
-
+    
+    enum DAButtonSetup {
+        case defaultRed
+    }
+    
     @IBInspectable var bgColor: UIColor? {
         didSet { self.backgroundColor = bgColor }
     }
@@ -51,5 +55,24 @@ class DAButton: UIButton {
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
         self.onTapEnd(self)
+    }
+    
+    func setup(mode: DAButtonSetup) {
+        switch mode {
+        case .defaultRed:
+            self.bgColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+            self.corners = 5
+            self.borders = 1
+            self.txtColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        }
+    }
+    
+    func fillSuperview() {
+        if let superview = superview {
+            self.widthAnchor.constraint(equalTo: superview.widthAnchor).isActive = true
+            self.heightAnchor.constraint(equalTo: superview.heightAnchor).isActive = true
+            self.centerYAnchor.constraint(equalTo: superview.centerYAnchor).isActive = true
+            self.centerXAnchor.constraint(equalTo: superview.centerXAnchor).isActive = true
+        }
     }
 }
