@@ -22,14 +22,40 @@
                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7s-PI-PfZ">
+                        <rect key="frame" x="162" y="12" width="188" height="69"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sro-ZC-zT0">
+                                <rect key="frame" x="0.0" y="0.0" width="188" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="X9F-GX-JKR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sro-ZC-zT0" firstAttribute="top" secondItem="b7s-PI-PfZ" secondAttribute="top" id="Gjv-Xl-xLx"/>
+                            <constraint firstItem="sro-ZC-zT0" firstAttribute="leading" secondItem="b7s-PI-PfZ" secondAttribute="leading" id="NiB-Dh-dqt"/>
+                            <constraint firstAttribute="trailing" secondItem="sro-ZC-zT0" secondAttribute="trailing" id="gT8-11-BML"/>
+                            <constraint firstAttribute="bottom" secondItem="sro-ZC-zT0" secondAttribute="bottom" id="udF-Eh-JAl"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="0hg-s4-42q" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0gm-vY-IlM"/>
+                    <constraint firstAttribute="trailing" secondItem="b7s-PI-PfZ" secondAttribute="trailing" constant="20" id="JkA-5K-ERz"/>
+                    <constraint firstAttribute="bottom" secondItem="b7s-PI-PfZ" secondAttribute="bottom" constant="11" id="cn7-M2-u0u"/>
+                    <constraint firstItem="b7s-PI-PfZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="cpI-43-g2h"/>
+                    <constraint firstItem="b7s-PI-PfZ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="0hg-s4-42q" secondAttribute="trailing" constant="94" id="ewT-TW-xzy"/>
                     <constraint firstItem="0hg-s4-42q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="iCH-8J-T1T"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="contentSubView" destination="b7s-PI-PfZ" id="82c-JF-WBz"/>
+                <outlet property="textField" destination="sro-ZC-zT0" id="bh9-gu-7R2"/>
                 <outlet property="titleLabel" destination="0hg-s4-42q" id="cuy-76-WZY"/>
             </connections>
             <point key="canvasLocation" x="173.91304347826087" y="164.0625"/>
