@@ -57,7 +57,7 @@ class DAButton: UIButton {
         self.onTapEnd(self)
     }
     
-    func setup(mode: DAButtonSetup) {
+    func setup(mode: DAButtonSetup, title: String) {
         switch mode {
         case .defaultRed:
             self.bgColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
@@ -65,6 +65,8 @@ class DAButton: UIButton {
             self.borders = 1
             self.txtColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         }
+        
+        self.setTitle(title, for: .normal)
     }
     
     func fillSuperview() {
