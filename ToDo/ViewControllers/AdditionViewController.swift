@@ -39,7 +39,7 @@ extension AdditionViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 4 {
-            return 70
+            return 90
         }
         return 50
     }
@@ -48,10 +48,13 @@ extension AdditionViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "dataCell") as! DataAdditionTableViewCell
             cell.setup(bgColor: .darkGray, title: "Name")
+            cell.textField.textContentType = .name
+            cell.textField.autocorrectionType = .yes
             return cell
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "dataCell") as! DataAdditionTableViewCell
             cell.setup(bgColor: .darkGray, title: "Date")
+            cell.configureDatePicker()
             return cell
         } else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "dataCell") as! DataAdditionTableViewCell
@@ -66,9 +69,10 @@ extension AdditionViewController: UITableViewDelegate, UITableViewDataSource {
             cell.setup(bgColor: .darkGray, title: "")
             
             let button = DAButton()
-            button.frame = CGRect(x: 0, y: 0, width: cell.frame.size.width, height: cell.frame.size.height)
-            button.setup(mode: .defaultRed)
+            button.frame = CGRect(x: cell.frame.size.width / 4, y: cell.frame.size.height / 4, width: cell.frame.size.width / 2, height: cell.frame.size.height / 2)
+            button.setup(mode: .defaultRed, title: "Done")
             cell.contentView.addSubview(button)
+            cell.contentSubView.isHidden = true
             button.fillSuperview()
             return cell
         }
