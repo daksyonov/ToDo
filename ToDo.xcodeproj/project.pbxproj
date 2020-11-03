@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BCA8C1EE255006C000095BC6 /* DataAdditionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA8C1EC255006C000095BC6 /* DataAdditionTableViewCell.swift */; };
 		BCA8C1EF255006C000095BC6 /* DataAdditionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA8C1ED255006C000095BC6 /* DataAdditionTableViewCell.xib */; };
+		BCA8C26625518C9500095BC6 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA8C26525518C9500095BC6 /* Date+Extensions.swift */; };
 		BCDCD6A7254C0E370012B231 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCD6A6254C0E370012B231 /* AppDelegate.swift */; };
 		BCDCD6A9254C0E370012B231 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCD6A8254C0E370012B231 /* SceneDelegate.swift */; };
 		BCDCD6AB254C0E370012B231 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCD6AA254C0E370012B231 /* ToDoListViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		BCA8C1EC255006C000095BC6 /* DataAdditionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAdditionTableViewCell.swift; sourceTree = "<group>"; };
 		BCA8C1ED255006C000095BC6 /* DataAdditionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataAdditionTableViewCell.xib; sourceTree = "<group>"; };
+		BCA8C26525518C9500095BC6 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		BCDCD6A3254C0E370012B231 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCDCD6A6254C0E370012B231 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCDCD6A8254C0E370012B231 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,14 @@
 			path = DataAdditionTableViewCell;
 			sourceTree = "<group>";
 		};
+		BCA8C26425518C8100095BC6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BCA8C26525518C9500095BC6 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BCDCD69A254C0E370012B231 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +89,7 @@
 		BCDCD6A5254C0E370012B231 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
+				BCA8C26425518C8100095BC6 /* Extensions */,
 				BCDCD6B7254C0E380012B231 /* Info.plist */,
 				BCDCD70F254FF2400012B231 /* Core */,
 				BCDCD6AF254C0E370012B231 /* ToDo.xcdatamodeld */,
@@ -210,6 +221,7 @@
 				BCDCD6BF254C0F970012B231 /* СheckBox.swift in Sources */,
 				BCDCD6AB254C0E370012B231 /* ToDoListViewController.swift in Sources */,
 				BCDCD716254FF4240012B231 /* AdditionViewController.swift in Sources */,
+				BCA8C26625518C9500095BC6 /* Date+Extensions.swift in Sources */,
 				BCDCD6A7254C0E370012B231 /* AppDelegate.swift in Sources */,
 				BCDCD6A9254C0E370012B231 /* SceneDelegate.swift in Sources */,
 				BCDCD6B1254C0E370012B231 /* ToDo.xcdatamodeld in Sources */,
